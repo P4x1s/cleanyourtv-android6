@@ -188,36 +188,7 @@ TV_HOST=192.168.1.50 ./build-and-install.sh
 
 ---
 
-## 11. 推送到 GitHub（本机操作）
-
-本项目已在本地完成 `git init`，分支为 **`main`**，并包含一次完整提交（`073ab17`，已用 `.gitignore` 排除所有构建产物，保留了原作者 `LICENSE`）。当前环境虽已验证可访问 github.com，但推送需要你的 GitHub 凭证，因此采用「你在本机推」的方式（更安全，不泄露 Token）。
-
-### 11.1 在 GitHub 网页新建空仓库
-1. 打开 https://github.com/new
-2. 仓库名填 **`cleanyourtv-android6`**，可见性选 **Public**
-3. **不要**勾选「Initialize this repository with a README / .gitignore / LICENSE」（保持空仓库，避免首次 push 冲突）
-
-### 11.2 在本机把项目推上去
-项目目录 `cleanyourtv-android6/` 已自带 `.git`，直接用，或解压 `cleanyourtv-android6-git.zip`（含完整 `.git` 历史）后进入该目录，执行：
-
-```bash
-# 把 <你的GitHub用户名> 换成你自己的
-git remote add origin https://github.com/<你的GitHub用户名>/cleanyourtv-android6.git
-git push -u origin main
-```
-
-- 认证：GitHub 自 2021 起不再接受账户密码，请用 **Personal Access Token（PAT，需勾选 repo 权限）** 当作密码；或先 `gh auth login` 再用 HTTPS/SSH。
-- 若你本机已配置 SSH key，可改用 SSH 地址：`git remote add origin git@github.com:<你的GitHub用户名>/cleanyourtv-android6.git`。
-
-### 11.3 （可选）把提交作者改成你自己的 GitHub 身份
-当前首次提交的作者是我设的占位身份（`CleanYourTV Android6 Fork <android6-fork@localhost>`）。想让它显示成你，在本机执行（只有一个 commit，直接 amend 即可）：
-
-```bash
-git commit --amend --author="你的名字 <你的GitHub邮箱>" --no-edit
-git push -u origin main --force-with-lease
-```
-
-### 11.4 说明
+### 11 说明
 - 本仓库是上游 `Gathin23/cleanyourtv` 的派生版，已保留其 `LICENSE` 与版权声明；本适配的改动集中在 `launcher/app/build.gradle`、几个 Java 文件，以及新增的 `install-tcl-android6.ps1` 与本文档。
 - 推送后，建议在你 GitHub 仓库的 README 顶部加一句说明这是 Android 6 适配分支，并指向本说明文档，方便其他人使用。
 
