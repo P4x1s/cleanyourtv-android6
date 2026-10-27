@@ -1,6 +1,7 @@
 > 本仓库是 [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv) 的 **Android 6（API 23）适配分支**，
 > 让原本仅支持 Android 8+（minSdk 26）的项目可运行于 Android 6 电视（如 TCL 旧电视）。
 > 本文件为分支专属的改造与安装说明；原项目完整文档见 [README.original.md](README.original.md)。
+> 已经适配TCL安卓6电视 2026-10-27
 
 # CleanYourTV 安卓 6（Android 6 / API 23）适配与安装说明
 
@@ -47,7 +48,7 @@
 
 ---
 
-## 4. 构建（需要你本地的环境，本机无 Android SDK 无法代编）
+## 4. 构建
 
 前置（在你自己电脑上）：
 - **JDK 17+**（Android Studio 自带的 `jbr` 即可）
